@@ -1,0 +1,192 @@
+  /*非icon部分*/
+  ul,li{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  ul{
+    float: left;
+    width:25%;
+  }
+
+/*
+  1.用em单位来控制大小，因为em跟当前元素的font-size有关，可以通过设置font-size来控制大小
+  2.用border-color切换颜色，在class中添加颜色样式，可以给定默认颜色，
+  也可以让用户自己添加颜色，自己添加颜色的方式只须设置border-color值即可
+*/
+  .icon-wy[class^=icon]{
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    width:1em;
+    height: 1em;
+    box-sizing: border-box;
+    vertical-align: baseline;
+  }
+  .icon-wy[class^=icon]:before,
+  .icon-wy[class^=icon]:after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    box-sizing: border-box;
+  }
+  .icon-wy[class^=icon].icon-default,
+  .icon-wy[class^=icon].icon-default:before,
+  .icon-wy[class^=icon].icon-default:after{
+    border-color:#333;
+  }
+
+  .icon-wy.icon-circle-o{
+    border-style:solid;
+    border-width:0.1em;
+    border-radius: 50%;
+  }
+  .icon-wy.icon-circle{
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    border-width: 0.5em;
+    border-style: solid;
+  }
+  .icon-wy.icon-note{
+    border-radius: 50%;
+    border-width: 0.1em;
+    border-style: solid;
+  }
+  .icon-wy.icon-note:before{
+    top:0.03em;
+    left:0.3em;
+    height:0;
+    width:0;
+    border-style: solid;
+    border-width:0.1em;
+    border-radius: 50%;
+  }
+  .icon-wy.icon-note:after{
+    bottom:0.03em;
+    left:0.3em;
+    width: 0;
+    height:0.45em;
+    border-style: solid;
+    border-width:0.1em;
+    border-radius: 0.1em;
+  }
+  .icon-wy.icon-menu{
+    top:-0.1em;
+    height: 0.8em;
+    border-top-style:solid;
+    border-top-width: 0.1em;
+    border-bottom-style:solid;
+    border-bottom-width: 0.1em;
+  }
+  .icon-wy.icon-menu:before{
+    top:0.25em;
+    width:1em;
+    border-top-style: solid;
+    border-top-width: 0.1em;
+  }
+  .icon-wy.icon-search:before{
+    width:0.65em;
+    height: 0.65em;
+    border-style: solid;
+    border-width: 0.1em;
+    border-radius: 50%;
+  }
+  .icon-wy.icon-search:after{
+    top:0.45em;
+    left:0.65em;
+    height: 0.6em;
+    border-left-style: solid;
+    border-left-width:0.2em;
+    border-radius: 0.2em;
+    transform: rotate(-45deg);
+  }
+  .icon-wy.icon-prohibit{
+    border-style: solid;
+    border-width: 0.1em;
+    border-radius: 50%;
+  }
+  .icon-wy.icon-prohibit:after{
+    left:0.35em;
+    height: 0.8em;
+    border-left-style: solid;
+    border-left-width: 0.1em;
+    transform: rotate(-45deg);
+
+  }
+  .icon-wy[class^=icon].icon-arrow-left:before{
+    border-left:0.45em solid transparent;
+    border-top:0.45em solid transparent;
+    border-bottom:0.45em solid transparent;
+  }
+  .icon-wy.icon-arrow-left:before{
+    top:0.05em;
+    left:-0.45em;
+    border-right-style: solid;
+    border-right-width: 0.45em;
+  }
+  .icon-wy.icon-arrow-left:after{
+    top:0.4em;
+    right: 0;
+    width:0.55em;
+    border-top-style: solid;
+    border-top-width: 0.2em;
+  }
+
+  .icon-wy[class^=icon].icon-arrow-right:before{
+    border-right:0.45em solid transparent;
+    border-top:0.45em solid transparent;
+    border-bottom:0.45em solid transparent;
+  }
+  .icon-wy.icon-arrow-right:before{
+    top:0.05em;
+    right:-0.45em;
+    border-left-style: solid;
+    border-left-width: 0.45em;
+  }
+  .icon-wy.icon-arrow-right:after{
+    top:0.4em;
+    left:0;
+    width: 0.55em;
+    border-top-style: solid;
+    border-top-width: 0.2em;
+  }
+
+
+  .icon-wy[class^=icon].icon-arrow-top:before{
+    border-right:0.45em solid transparent;
+    border-left:0.45em solid transparent;
+    border-top:0.45em solid transparent;
+  }
+  .icon-wy.icon-arrow-top:before{
+    left:0.05em;
+    bottom: 0.55em;
+    border-bottom-style: solid;
+    border-bottom-width: 0.45em;
+  }
+  .icon-wy.icon-arrow-top:after{
+    bottom:0;
+    left:0.4em;
+    height: 0.55em;
+    border-left-style: solid;
+    border-left-width: 0.2em;
+  }
+
+  .icon-wy[class^=icon].icon-arrow-bottom:before{
+    border-right:0.45em solid transparent;
+    border-left:0.45em solid transparent;
+    border-bottom:0.45em solid transparent;
+  }
+  .icon-wy.icon-arrow-bottom:before{
+    top:0.55em;
+    left:0.05em;
+    border-top-style: solid;
+    border-top-width: 0.45em;
+  }
+  .icon-wy.icon-arrow-bottom:after{
+    top:0;
+    left:0.4em;
+    height: 0.55em;
+    border-left-style: solid;
+    border-left-width: 0.2em;
+  }
